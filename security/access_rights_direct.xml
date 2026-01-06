@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!-- This file is part of SAGE Education.   The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+
+<!-- GROUP OF PERMISSIONS FOR DIRECTION USERS -->
+<tryton>
+    <data> 
+        <!-- Defining Rules for Accessing Models -->
+        <!-- start Calendary -->
+        <record model="ir.model.access" 
+            id="access_akademy_classe_evaluation_academic_calendary-group_akademy_direc">
+            <field name="model" search="[('model', '=', 'akademy_classe_evaluation.academic.calendary')]"/>
+            <field name="group" ref="akademy_party.group_akademy_direc"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <!-- access rule group -->
+        <record model="ir.rule.group" 
+            id="rule_group_akademy_classe_evaluation_academic_calendary-group_akademy_direc">
+            <field name="name">Caldenários</field>
+            <field name="model" 
+                search="[('model', '=', 'akademy_classe_evaluation.academic.calendary')]"/>
+            <field name="global_p" eval="False"/>
+            <field name="default_p" eval="False"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.rule.group-res.group" 
+            id="res_group_akademy_classe_evaluation_academic_calendary-group_akademy_direc">
+            <field name="rule_group" ref="rule_group_akademy_classe_evaluation_academic_calendary-group_akademy_direc"/>
+            <field name="group" ref="akademy_party.group_akademy_direc"/>
+        </record>
+
+        <!-- start Calendary Activites -->
+        <record model="ir.model.access" 
+            id="access_akademy_classe_evaluation_academic_calendary_activite-group_akademy_direc">
+            <field name="model" search="[('model', '=', 'akademy_classe_evaluation.academic.calendary.activite')]"/>
+            <field name="group" ref="akademy_party.group_akademy_direc"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <!-- access rule group -->
+        <record model="ir.rule.group" 
+            id="rule_group_akademy_classe_evaluation_academic_calendary_activite-group_akademy_direc">
+            <field name="name">Atividades do Caldenário</field>
+            <field name="model" 
+                search="[('model', '=', 'akademy_classe_evaluation.academic.calendary.activite')]"/>
+            <field name="global_p" eval="False"/>
+            <field name="default_p" eval="False"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.rule.group-res.group" 
+            id="res_group_akademy_classe_evaluation_academic_calendary_activite-group_akademy_direc">
+            <field name="rule_group" ref="rule_group_akademy_classe_evaluation_academic_calendary_activite-group_akademy_direc"/>
+            <field name="group" ref="akademy_party.group_akademy_direc"/>
+        </record> 
+        
+        <!-- start Calendary Avaliation -->
+        <record model="ir.model.access" 
+            id="access_akademy_classe_evaluation_academic_calendary_avaliation-group_akademy_direc">
+            <field name="model" search="[('model', '=', 'akademy_classe_evaluation.academic.calendary.avaliation')]"/>
+            <field name="group" ref="akademy_party.group_akademy_direc"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <!-- access rule group -->
+        <record model="ir.rule.group" 
+            id="rule_group_akademy_classe_evaluation_academic_calendary_avaliation-group_akademy_direc">
+            <field name="name">Avaliations do Caldenário</field>
+            <field name="model" 
+                search="[('model', '=', 'akademy_classe_evaluation.academic.calendary.avaliation')]"/>
+            <field name="global_p" eval="False"/>
+            <field name="default_p" eval="False"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.rule.group-res.group" 
+            id="res_group_akademy_classe_evaluation_academic_calendary_avaliation-group_akademy_direc">
+            <field name="rule_group" ref="rule_group_akademy_classe_evaluation_academic_calendary_avaliation-group_akademy_direc"/>
+            <field name="group" ref="akademy_party.group_akademy_direc"/>
+        </record>  
+    </data>
+</tryton>
