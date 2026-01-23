@@ -8,7 +8,8 @@ this repository contains the full copyright notices and license terms. -->
                 <field name="name">Calendário Geral</field>
                 <field name="report_name">akademy_classe_evaluation.academic.calendary.activite.report</field>
                 <field name="model">akademy_configuration.lective.year</field>
-                <field name="report">akademy_classe_evaluation/reports/academic_calendary.odt</field>
+                <field name="report">akademy_classe_evaluation/reports/academic_calendary.fodt</field>
+                <field name="extension">pdf</field>
         </record>
         <record model="ir.action.keyword" id="akademy_classe_evaluation_academic_calendary_activite_report_keyword">
                 <field name="keyword">form_print</field>
@@ -20,7 +21,8 @@ this repository contains the full copyright notices and license terms. -->
                 <field name="name">Calendário Avaliações</field>
                 <field name="report_name">akademy_classe_evaluation.academic.calendary.avaliation.report</field>
                 <field name="model">akademy_configuration.lective.year</field>
-                <field name="report">akademy_classe_evaluation/reports/academic_calendary_avaliation.odt</field>
+                <field name="report">akademy_classe_evaluation/reports/academic_calendary_avaliation.fodt</field>
+                <field name="extension">pdf</field>
         </record>
         <record model="ir.action.keyword" id="akademy_classe_evaluation_academic_calendary_avaliation_report_keyword">
                 <field name="keyword">form_print</field>
@@ -32,7 +34,8 @@ this repository contains the full copyright notices and license terms. -->
                 <field name="name">Relatório Turma</field>
                 <field name="report_name">akademy_classe_evaluation.classes.evaluation.report</field>
                 <field name="model">akademy_configuration.lective.year</field>
-        <field name="report">akademy_classe_evaluation/reports/classes_evaluation.odt</field>
+                <field name="report">akademy_classe_evaluation/reports/classes_evaluation.fodt</field>
+                <field name="extension">pdf</field>
         </record>
         <record model="ir.action.keyword" id="classes_evaluation_report_keyword">
                 <field name="keyword">form_print</field>
