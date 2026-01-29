@@ -13,7 +13,6 @@ def register():
         calendary.AcademicCalendary,
         calendary.AcademicCalendaryActivite,
         calendary.AcademicCalendaryAvaliation,
-        classe.ClassesEvaluationCreateWizardStart,
         employee.Employee,
 
         module='akademy_classe_evaluation', type_='model'

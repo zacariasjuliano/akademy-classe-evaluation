@@ -7,34 +7,14 @@ from trytond.pool import PoolMeta, Pool
 from trytond.pyson import Eval, Not
 
 
-
-class Classes(metaclass=PoolMeta):
-    'Classes'
-    __name__ = 'akademy_classe.classes'
-    
-    state = fields.Boolean('Bloqueada', help="Estado da turma.")
-
-    @classmethod
-    def default_state(cls):
-        return False
-
-
-class ClassesEvaluationCreateWizardStart(ModelView):
-    'ClassesStateCreate State'
-    __name__ = 'akademy_classe_evaluation.wizclassesevaluation.create.start'
-    
-    lective_year = fields.Many2One('akademy_configuration.lective.year', 'Ano letivo',
-        required=True, help="Informa o nome do ano letivo.")
-
-
-class ClassesEvaluationCreateWizard(Wizard):
+class ClassesEvaluationCreateWizard(metaclass=PoolMeta):
     'ClassesState Create'
-    __name__ = 'akademy_classe_evaluation.wizclassesevaluation.create'
+    __name__ = 'akademy_classe.wizclassesevaluation.create'
 
     start_state = 'start'
     start = StateView(
-        'akademy_classe_evaluation.wizclassesevaluation.create.start',
-        'akademy_classe_evaluation.act_classesevaluation_wizard_from', [
+        'akademy_classe.wizclassesevaluation.create.start',
+        'akademy_avaliation.act_classesevaluation_wizard_from', [
             Button(string=u'Cancelar', state='end', icon='tryton-cancel'),
             Button(string=u'Processar', state='classes_evaluation', icon='tryton-save')
         ]
@@ -52,37 +32,54 @@ class ClassesEvaluationCreateWizard(Wizard):
         ClassesEvaluation = Pool().get('akademy_classe.classes.evaluation')
         classes_evaluations = ClassesEvaluation.search([('lective_year', '=', lective_year)])
         Student = Pool().get('company.student')
-        
-        if len(classes_evaluations) <= 0:
-            for classe in lective_year.classes:
+        ClasseStudent = Pool().get('akademy_classe.classe.student')
+        ClasseStudentDiscipline = Pool().get('akademy_classe.classe.student.discipline')
 
-                student_gender_males = 0
-                student_gender_females = 0
-                student_gender_others = 0
-                teacher_gender_males = 0
-                teacher_gender_females = 0
-                teacher_gender_others = 0
-                student_matriculation_approveds = 0
-                student_matriculation_repproveds = 0
-                student_matriculation_others = 0
-                lective_years = 0
+        student_matriculation_approveds = 0
+        student_matriculation_repproveds = 0
+        student_matriculation_others = 0
 
+        student_gender_males = 0
+        student_gender_females = 0
+        student_gender_others = 0
+        teacher_gender_males = 0
+        teacher_gender_females = 0
+        teacher_gender_others = 0
+        lective_years = 0
+                        
+        for classe in lective_year.classes:
+            if classe.state == False:
                 for classe_student in classe.classe_student:
-                    if classe_student.state.name == 'Aprovado(a)':
-                        student_matriculation_approveds += 1
+                    student_matriculation_approveds = 0
+                    student_matriculation_repproveds = 0
+                    student_matriculation_others = 0
+
+                    for historic_grade in classe_student.historic_grades:
+                        if classe_student.classes == historic_grade.classes:
+                            #if historic_grades.studyplan_discipline.flaut
+                            if historic_grade.studyplan_discipline.average <= historic_grade.average:
+                                student_matriculation_approveds += 1
+                                ClasseStudentDiscipline.update_classe_student_discipline(classe_student, historic_grade.studyplan_discipline, 'Aprovado(a)')  
+                            elif historic_grade.studyplan_discipline.average > historic_grade.average:
+                                student_matriculation_repproveds += 1 
+                                ClasseStudentDiscipline.update_classe_student_discipline(classe_student, historic_grade.studyplan_discipline, 'Aprovado(a)')
+                            else:
+                                student_matriculation_others += 1
+                                Student.update_student(classe_student.student, classe_student.classes.classe, classe_student.state.name)
+
+                    if student_matriculation_approveds >= (student_matriculation_repproveds + student_matriculation_others):
                         Student.update_student(classe_student.student, classe_student.classes.classe, 'Aprovado(a)')
-                    elif classe_student.state.name == 'Reprovado(a)':
-                        student_matriculation_repproveds += 1
-                        Student.update_student(classe_student.student, classe_student.classes.classe, 'Reprovado(a)')
+                        ClasseStudent.update_classe_student(classe_student, 'Aprovado(a)')
                     else:
-                        student_matriculation_others += 1
+                        Student.update_student(classe_student.student, classe_student.classes.classe, 'Reprovado(a)')
+                        ClasseStudent.update_classe_student(classe_student, 'Reprovado(a)')
 
                     if classe_student.student.party.gender == 'masculino':
                         student_gender_males += 1
                     elif classe_student.student.party.gender == 'feminino':
                         student_gender_females += 1
                     else:
-                        student_gender_others += 1
+                        student_gender_others += 1                            
 
                 for classe_teacher in classe.classe_teacher:
                     if classe_teacher.employee.party.gender == 'masculino':
@@ -90,12 +87,9 @@ class ClassesEvaluationCreateWizard(Wizard):
                     elif classe_teacher.employee.party.gender == 'feminino':
                         teacher_gender_females += 1
                     else:
-                        teacher_gender_others += 1
-                      
-                if classe.state:
-                    classe.state = True
-                    classe.save()
-                    
+                        teacher_gender_others += 1                
+
+                if len(classes_evaluations) <= 0:                        
                     classes_evaluation_report = ClassesEvaluation(
                         name = lective_year.name,
                         lective_year = lective_year,
@@ -112,20 +106,9 @@ class ClassesEvaluationCreateWizard(Wizard):
                     )
 
                     classes_evaluation_report.save()
-        
-        else:
-            for classe in lective_year.classes:
-                for classe_student in classe.classe_student:
-                    if classe_student.state.name == 'Aprovado(a)':
-                        Student.update_student(classe_student.student, classe_student.classes.classe, 'Aprovado(a)')
-                    elif classe_student.state.name == 'Reprovado(a)':
-                        Student.update_student(classe_student.student, classe_student.classes.classe, 'Reprovado(a)')
-                    else:
-                        pass
 
-                if classe.state:
-                    classe.state = True
-                    classe.save()
+                classe.state = True
+                classe.save() 
 
 
 class ClassesEvaluation(ModelSQL):

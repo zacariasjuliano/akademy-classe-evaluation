@@ -1,9 +1,8 @@
 # 🏫 SAGE Education - Gestão Institucional
 
-**Versão:** 1.0  
+**Versão:** 1.3  
 **Módulo:** Tryton  
-**Desenvolvedor:** Zacarias Juliano Capingala *(Homem Marketing)*  
-**Data:** 20/10/2025
+**Desenvolvedor:** Zacarias Juliano Capingala *(FPC)*
 
 
 ---
