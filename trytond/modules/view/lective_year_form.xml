@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- This file is part of SAGE Education.   The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+
+<data>
+	<xpath expr="/form/notebook/page[@id='quarter']" position="after">  
+        <page string="Calendário" id="academic_calendary">
+            <field name="academic_calendars" mode="tree,from" colspan="4"
+                view_ids="akademy_classe_evaluation.academic_calendary_view_list,akademy_classe_evaluation.academic_calendary_view_form"/>
+        </page>
+    </xpath>
+</data>

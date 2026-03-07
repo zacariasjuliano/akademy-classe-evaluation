@@ -1,0 +1,236 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:akademy_configuration.lective.year,academic_calendars:"
+msgid "Calendário académico"
+msgstr "Academic calendar"
+
+msgctxt "model:akademy_ga.academic.calendary,name:"
+msgid "Academic Caldendary"
+msgstr "Academic calendar"
+
+msgctxt "field:akademy_ga.academic.calendary,code:"
+msgid "Código"
+msgstr "Code"
+
+msgctxt "field:akademy_ga.academic.calendary,name:"
+msgid "Nome"
+msgstr "Name"
+
+msgctxt "field:akademy_ga.academic.calendary,start:"
+msgid "Início"
+msgstr "Start"
+
+msgctxt "field:akademy_ga.academic.calendary,end:"
+msgid "Fim"
+msgstr "End"
+
+msgctxt "field:akademy_ga.academic.calendary,description:"
+msgid "Descrição"
+msgstr "Description"
+
+msgctxt "field:akademy_ga.academic.calendary,lective_year:"
+msgid "Ano letivo"
+msgstr "Lective year"
+
+msgctxt "field:akademy_ga.academic.calendary,calendary_activites:"
+msgid "Atividades"
+msgstr "Activites"
+
+msgctxt "field:akademy_ga.academic.calendary,calendary_avaliations:"
+msgid "Avaliações"
+msgstr "Avaliation"
+
+msgctxt "help:akademy_ga.academic.calendary,code:"
+msgid "Código do ano calendário.\nEx: 25/26"
+msgstr "Calendar year code.\nEx: 25/26"
+
+msgctxt "help:akademy_ga.academic.calendary,name:"
+msgid "Nome do calendário."
+msgstr "Calendar name."
+
+msgctxt "help:akademy_ga.academic.calendary,start:"
+msgid "Data de início do calendário."
+msgstr "Calendar start date."
+
+msgctxt "help:akademy_ga.academic.calendary,end:"
+msgid "Data de fim de calendário."
+msgstr "Calendar end date."
+
+msgctxt "error:akademy_ga.academic.calendary:"
+msgid ""
+"Não foi possível criar o calendário, por favor verificar se a data de início é menor que "
+"a data de término."
+msgstr ""
+"We were unable to create the calendar; please check if the start date is earlier than the "
+"end date."
+
+msgctxt "model:akademy_ga.academic.calendary.activite,name:"
+msgid "Academic Caldendary Activite"
+msgstr "Calendar activities"
+
+msgctxt "field:akademy_ga.academic.calendary.activite,code:"
+msgid "Código"
+msgstr "Code"
+
+msgctxt "field:akademy_ga.academic.calendary.activite,name:"
+msgid "Nome"
+msgstr "Name"
+
+msgctxt "field:akademy_ga.academic.calendary.activite,start:"
+msgid "Início"
+msgstr "Start"
+
+msgctxt "field:akademy_ga.academic.calendary.activite,end:"
+msgid "Fim"
+msgstr "End"
+
+msgctxt "field:akademy_ga.academic.calendary.activite,description:"
+msgid "Descrição"
+msgstr "Description"
+
+msgctxt "field:akademy_ga.academic.calendary.activite,academic_calendary:"
+msgid "Calendário"
+msgstr "Calendar"
+
+msgctxt "field:akademy_ga.academic.calendary.activite,quarter:"
+msgid "Período letivo"
+msgstr "Academic year"
+
+msgctxt "help:akademy_ga.academic.calendary.activite,code:"
+msgid "Código da atividade do calendário.\nEx: 25/26"
+msgstr "Calendar activity code.\nEx: 25/26"
+
+msgctxt "help:akademy_ga.academic.calendary.activite,name:"
+msgid "Nome da atividade do calendário."
+msgstr "Name of the calendar activity."
+
+msgctxt "help:akademy_ga.academic.calendary.activite,start:"
+msgid "Data de início da atividade do calendário."
+msgstr "Start date of the calendar activity."
+
+msgctxt "help:akademy_ga.academic.calendary.activite,end:"
+msgid "Data de fim da atividade do calendário."
+msgstr "End date of the calendar activity."
+
+msgctxt "help:akademy_ga.academic.calendary.activite,quarter:"
+msgid "Escolha o período letivo para atividade."
+msgstr "Choose the academic period for the activity."
+
+msgctxt "error:akademy_ga.academic.calendary.activite:"
+msgid ""
+"Não foi possível criar a atividade para calendário, por favor verificar se a data de "
+"início é menor que a data de término."
+msgstr ""
+"We were unable to create the activity for the calendar; please check if the start "
+"date is earlier than the end date."
+
+msgctxt "model:akademy_ga.academic.calendary.avaliation,name:"
+msgid "Academic Caldendary Avaliation"
+msgstr "Assessment calendar"
+
+msgctxt "field:akademy_ga.academic.calendary.avaliation,code:"
+msgid "Código"
+msgstr "Code"
+
+msgctxt "field:akademy_ga.academic.calendary.avaliation,name:"
+msgid "Nome"
+msgstr "Name"
+
+msgctxt "field:akademy_ga.academic.calendary.avaliation,start:"
+msgid "Início"
+msgstr "Start"
+
+msgctxt "field:akademy_ga.academic.calendary.avaliation,end:"
+msgid "Fim"
+msgstr "End"
+
+msgctxt "field:akademy_ga.academic.calendary.avaliation,description:"
+msgid "Descrição"
+msgstr "Description"
+
+msgctxt "field:akademy_ga.academic.calendary.avaliation,academic_calendary:"
+msgid "Calendário"
+msgstr "Calendar"
+
+msgctxt "field:akademy_ga.academic.calendary.avaliation,quarter:"
+msgid "Período letivo"
+msgstr "Academic year"
+
+msgctxt "field:akademy_ga.academic.calendary.avaliation,metric_avaliation:"
+msgid "Avaliação"
+msgstr "Avaliation"
+
+msgctxt "help:akademy_ga.academic.calendary.avaliation,code:"
+msgid "Código da avaliação do calendário.\nEx: 25/26"
+msgstr "Assessment code for the calendar.\nEx: 25/26"
+
+msgctxt "help:akademy_ga.academic.calendary.avaliation,name:"
+msgid "Nome da avaliação do calendário."
+msgstr "Name of the calendar assessment."
+
+msgctxt "help:akademy_ga.academic.calendary.avaliation,start:"
+msgid "Data de início da avaliação do calendário."
+msgstr "Start date of the calendar assessment."
+
+msgctxt "help:akademy_ga.academic.calendary.avaliation,end:"
+msgid "Data de fim da avaliação do calendário."
+msgstr "Data de fim da avaliação do calendário."
+
+msgctxt "help:akademy_ga.academic.calendary.avaliation,quarter:"
+msgid "Escolha o período letivo para avaliação."
+msgstr "Choose the academic period for evaluation."
+
+msgctxt "help:akademy_ga.academic.calendary.avaliation,metric_avaliation:"
+msgid "Nome da avaliação."
+msgstr "Name of the evaluation."
+
+msgctxt "error:akademy_ga.academic.calendary.avaliation:"
+msgid ""
+"Não foi possível criar o calendário, por favor verificar se a data de início é menor "
+"que a data de término."
+msgstr ""
+"We were unable to create the calendar; please check if the start date is earlier than "
+"the end date."
+
+msgctxt "field:company.employee,institution_help:"
+msgid "Vigilante"
+msgstr "Vigilant"
+
+msgctxt "field:company.employee,institution_support:"
+msgid "Auxiliar"
+msgstr "Assistant"
+
+msgctxt "help:company.employee,institution_help:"
+msgid "A entidade será tratada como vigilante da instituição"
+msgstr "The entity will be treated as a security guard for the institution."
+
+msgctxt "help:company.employee,institution_support:"
+msgid "A entidade será tratada como auxiliar da instituição."
+msgstr "The entity will be treated as an auxiliary to the institution."
+
+msgctxt "field:akademy_rh_teacher.presence.month,lective_year:"
+msgid "Ano letivo"
+msgstr "Lective year"
+
+msgctxt "field:akademy_rh_teacher.holiday.map,lective_year:"
+msgid "Ano letivo"
+msgstr "Lective year"
+
+msgctxt "field:akademy_rh_teacher.teacher.evaluation,lective_year:"
+msgid "Ano letivo"
+msgstr "Lective year"
+
+msgctxt "field:akademy_rh_teacher.teacher.evaluation,quarter:"
+msgid "Período letivo"
+msgstr "Quarter"
+
+msgctxt "help:akademy_rh_teacher.teacher.evaluation,quarter:"
+msgid "Escolha o período letivo."
+msgstr "Choose the academic period."
+
+msgctxt "field:akademy_rh_teacher.employee.payment.order,lective_year:"
+msgid "Ano letivo"
+msgstr "Lective year"
+

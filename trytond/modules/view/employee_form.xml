@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- This file is part of SAGE Education.   The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+
+<data>
+    <xpath expr="/form/group[@id='entinty']" position="replace">
+        <group id="entinty_instituiton" colspan="4" col="6">
+            <label name="teacher"/>
+            <field name="teacher"/>
+            <label name="institution_help"/>
+            <field name="institution_help"/>
+            <label name="institution_support"/>
+            <field name="institution_support"/>
+        </group>
+    </xpath>
+</data>
