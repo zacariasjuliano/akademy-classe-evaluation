@@ -1,0 +1,12 @@
+
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Setup Tryton Module
+trytond/modules/akademy_classe_evaluation/setup.py
+
+
+.setup.py
