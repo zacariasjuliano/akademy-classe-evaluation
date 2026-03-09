@@ -1,6 +1,6 @@
 # 🏫 SAGE Education - Gestão Institucional
 
-**Versão:** 1.3  
+**Versão:** 1.3.x  
 **Módulo:** Akademy Classe Evaluation  
 **Desenvolvedor:** Zacarias Juliano Capingala *(FPC)*
 
@@ -39,7 +39,7 @@ We host a public demo server where you can try out SAGE Education with different
 
 ## Akademy Classe Evaluation Module
 
-The **Akademy Classe Evaluation (Class Management)** module is a complementary module responsible for **academic management focused on classes evaluation and calendary**, keeping all information organized and accessible to the institution.
+The **Akademy Classe Evaluation (Classes Management)** module is a complementary module responsible for **academic management focused on classes evaluation and calendary**, keeping all information organized and accessible to the institution.
 
 It offers advanced tools for **report classes, teachers, and students**, allowing for centralized and efficient monitoring of each class performance and progress.
 

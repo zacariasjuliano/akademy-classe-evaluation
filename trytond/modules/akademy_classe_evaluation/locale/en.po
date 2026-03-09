@@ -234,3 +234,30 @@ msgctxt "field:akademy_rh_teacher.employee.payment.order,lective_year:"
 msgid "Ano letivo"
 msgstr "Lective year"
 
+msgctxt "view:akademy_classe_evaluation.academic.calendary.activite:"
+msgid "Descrição"
+msgstr "Description"
+
+msgctxt "view:akademy_classe_evaluation.academic.calendary.avaliation:"
+msgid "Descrição"
+msgstr "Descrição"
+
+msgctxt "view:akademy_classe_evaluation.academic.calendary:"
+msgid "Descrição"
+msgstr "Description"
+
+msgctxt "view:akademy_classe_evaluation.academic.calendary:"
+msgid "Atividades"
+msgstr "Activities"
+
+msgctxt "view:akademy_classe_evaluation.academic.calendary:"
+msgid "Avaliações"
+msgstr "Avaliations"
+
+msgctxt "view:akademy_configuration.lective.year:"
+msgid "Calendário"
+msgstr "Calendar"
+
+msgctxt "model:ir.action,name:act_classesevaluation_wizard"
+msgid "Avaliar"
+msgstr "Evaluate"
