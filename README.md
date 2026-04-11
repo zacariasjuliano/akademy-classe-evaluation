@@ -1,8 +1,7 @@
 # 🏫 SAGE Education - Gestão Institucional
 
-**Versão:** 1.3.x  
-**Módulo:** Akademy Classe Evaluation  
-**Desenvolvedor:** Zacarias Juliano Capingala *(FPC)*
+**Module:** Akademy Classe Evaluation   
+**Version:** 7.0.x   
 
 
 ---
@@ -83,8 +82,8 @@ It is suitable for **schools, training centers, and higher education institution
 ### 🌐 Homepage
   
 **Website:** [sage-edu.comunidadedosaber.ao](https://sage-edu.comunidadedosaber.ao)  
-**App:** [sage.comunidadedosaber.ao](https://sage-edu.comunidadedosaber.ao)  
-**Docs:** [docs.comunidadedosaber.ao](https://sage-edu.comunidadedosaber.ao)  
+**App:** [sage.comunidadedosaber.ao](https://sage.comunidadedosaber.ao)  
+**Docs:** [docs.comunidadedosaber.ao](https://docs.comunidadedosaber.ao)  
 **Team:** [comunidadedosaber.ao](https://comunidadedosaber.ao)  
 **PyPi:** [SAGE Edu](https://pypi.org/user/comunidade_do_saber)
 
